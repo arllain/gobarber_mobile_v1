@@ -1,14 +1,10 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import '~/config/ReactotronConfig';
 require('react-native').unstable_enableLogBox();
+import '~/config/ReactotronConfig';
+import Routes from '~/routes';
 
 // import { Container } from './styles';
 
 export default function src() {
-  return (
-    <View>
-      <Text>GoBarber</Text>
-    </View>
-  );
+  return <Routes></Routes>;
 }

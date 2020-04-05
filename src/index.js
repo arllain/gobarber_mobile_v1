@@ -2,8 +2,13 @@ import React from 'react';
 require('react-native').unstable_enableLogBox();
 import '~/config/ReactotronConfig';
 import Routes from '~/routes';
-// import { Container } from './styles';
+import { StatusBar } from 'react-native';
 
 export default function src() {
-  return <Routes></Routes>;
+  return (
+    <>
+      <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
+      <Routes />
+    </>
+  );
 }

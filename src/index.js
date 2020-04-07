@@ -1,14 +1,21 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import '~/config/ReactotronConfig';
 require('react-native').unstable_enableLogBox();
+import { PersistGate } from 'redux-persist/integration/react';
+import { Provider } from 'react-redux';
+import { StatusBar } from 'react-native';
 
-// import { Container } from './styles';
+import '~/config/ReactotronConfig';
 
-export default function src() {
+import { store, persistor } from '~/store';
+import Router from '~/Router';
+
+export default function App() {
   return (
-    <View>
-      <Text>GoBarber</Text>
-    </View>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
+        <Router />
+      </PersistGate>
+    </Provider>
   );
 }

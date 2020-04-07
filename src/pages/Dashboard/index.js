@@ -34,7 +34,7 @@ export default function Dashboard() {
   return (
     <Background>
       <Container>
-        <Title> Agendamentos</Title>
+        <Title> Appointments</Title>
         <List
           data={appointments}
           keyExtractor={(item) => String(item.id)}
@@ -48,7 +48,7 @@ export default function Dashboard() {
 }
 
 Dashboard.navigationOptions = {
-  tabBarLabel: 'Agendamentos',
+  tabBarLabel: 'Appointments',
   tabBarIcon: ({ tintColor }) => (
     <Icon name="event" size={20} color={tintColor} />
   ),
